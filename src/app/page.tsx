@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
+import Image from "next/image";
 import "./globals.css";
 
 const geistSans = Geist({
@@ -24,12 +25,22 @@ export default function Home() {
       <nav className="fixed top-0 w-full z-50 bg-[#0a0a0a]/80 backdrop-blur-md border-b border-gray-800">
         <div className="max-w-7xl mx-auto px-6 py-4">
           <div className="flex justify-between items-center">
-            <div className="text-2xl font-bold gradient-text">
-              Kyvra Tech
+            <div className="flex items-center space-x-3">
+              <Image 
+                src="/kyvra_logo.svg" 
+                alt="Kyvra Tech Logo" 
+                width={40} 
+                height={40}
+                className="w-10 h-10"
+              />
+              <div className="text-2xl font-bold gradient-text">
+                Kyvra Tech
+              </div>
             </div>
             <div className="hidden md:flex space-x-8">
               <a href="#about" className="hover:text-[#00b2a9] transition-colors">About</a>
               <a href="#services" className="hover:text-[#00b2a9] transition-colors">Services</a>
+              <a href="#projects" className="hover:text-[#00b2a9] transition-colors">Projects</a>
               <a href="#contact" className="hover:text-[#00b2a9] transition-colors">Contact</a>
             </div>
             <button className="bg-[#00b2a9] hover:bg-[#00d4c7] px-6 py-2 rounded-full transition-colors">
@@ -107,6 +118,92 @@ export default function Home() {
         </div>
       </section>
 
+      {/* Projects Section */}
+      <section id="projects" className="py-20 px-6">
+        <div className="max-w-7xl mx-auto">
+          <h2 className="text-4xl md:text-5xl font-bold text-center mb-16">
+            Our <span className="gradient-text">Projects</span>
+          </h2>
+          <div className="grid md:grid-cols-2 gap-8">
+            {/* Pactus Wallet */}
+            <div className="bg-gray-800/50 p-8 rounded-2xl border border-gray-700 hover:border-[#00b2a9] transition-all hover:scale-105">
+              <div className="flex items-center justify-between mb-6">
+                <div className="w-12 h-12 bg-[#00b2a9] rounded-lg flex items-center justify-center">
+                  <svg className="w-6 h-6 text-black" fill="currentColor" viewBox="0 0 20 20">
+                    <path d="M4 4a2 2 0 00-2 2v1h16V6a2 2 0 00-2-2H4zM18 9H2v5a2 2 0 002 2h12a2 2 0 002-2V9zM4 13a1 1 0 011-1h1a1 1 0 110 2H5a1 1 0 01-1-1zm5-1a1 1 0 100 2h1a1 1 0 100-2H9z" />
+                  </svg>
+                </div>
+                <span className="bg-green-500/20 text-green-400 px-3 py-1 rounded-full text-sm font-medium">
+                  Completed
+                </span>
+              </div>
+              <h3 className="text-2xl font-bold mb-4">Pactus Wallet</h3>
+              <p className="text-gray-300 mb-6">
+                A comprehensive cryptocurrency wallet solution for the Pactus blockchain network. 
+                Features secure key management, transaction processing, and user-friendly interface.
+              </p>
+              <div className="flex flex-wrap gap-2 mb-6">
+                <span className="bg-[#00b2a9]/20 text-[#00b2a9] px-3 py-1 rounded-full text-sm">React</span>
+                <span className="bg-[#00b2a9]/20 text-[#00b2a9] px-3 py-1 rounded-full text-sm">TypeScript</span>
+                <span className="bg-[#00b2a9]/20 text-[#00b2a9] px-3 py-1 rounded-full text-sm">Web3</span>
+                <span className="bg-[#00b2a9]/20 text-[#00b2a9] px-3 py-1 rounded-full text-sm">Blockchain</span>
+              </div>
+              <div className="flex gap-4">
+                <a 
+                  href="https://wallet.pactus.org/" 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  className="bg-[#00b2a9] hover:bg-[#00d4c7] px-6 py-2 rounded-full text-sm font-semibold transition-all hover:scale-105"
+                >
+                  Live Demo
+                </a>
+                <a 
+                  href="https://github.com/orgs/pactus-project/teams/wallet" 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  className="border border-[#00b2a9] text-[#00b2a9] hover:bg-[#00b2a9] hover:text-black px-6 py-2 rounded-full text-sm font-semibold transition-all"
+                >
+                  GitHub
+                </a>
+              </div>
+            </div>
+
+            {/* Pactus Node Tracker */}
+            <div className="bg-gray-800/50 p-8 rounded-2xl border border-gray-700 hover:border-[#00b2a9] transition-all hover:scale-105">
+              <div className="flex items-center justify-between mb-6">
+                <div className="w-12 h-12 bg-[#00b2a9] rounded-lg flex items-center justify-center">
+                  <svg className="w-6 h-6 text-black" fill="currentColor" viewBox="0 0 20 20">
+                    <path fillRule="evenodd" d="M3 4a1 1 0 011-1h12a1 1 0 011 1v2a1 1 0 01-1 1H4a1 1 0 01-1-1V4zM3 10a1 1 0 011-1h6a1 1 0 011 1v6a1 1 0 01-1 1H4a1 1 0 01-1-1v-6zM14 9a1 1 0 00-1 1v6a1 1 0 001 1h2a1 1 0 001-1v-6a1 1 0 00-1-1h-2z" clipRule="evenodd" />
+                  </svg>
+                </div>
+                <span className="bg-yellow-500/20 text-yellow-400 px-3 py-1 rounded-full text-sm font-medium">
+                  In Progress
+                </span>
+              </div>
+              <h3 className="text-2xl font-bold mb-4">Pactus Node Tracker</h3>
+              <p className="text-gray-300 mb-6">
+                A comprehensive monitoring system for Pactus blockchain nodes worldwide. 
+                Displays active nodes, geographical distribution, and bootstrap node health status.
+              </p>
+              <div className="flex flex-wrap gap-2 mb-6">
+                <span className="bg-[#00b2a9]/20 text-[#00b2a9] px-3 py-1 rounded-full text-sm">Next.js</span>
+                <span className="bg-[#00b2a9]/20 text-[#00b2a9] px-3 py-1 rounded-full text-sm">React</span>
+                <span className="bg-[#00b2a9]/20 text-[#00b2a9] px-3 py-1 rounded-full text-sm">Monitoring</span>
+                <span className="bg-[#00b2a9]/20 text-[#00b2a9] px-3 py-1 rounded-full text-sm">Analytics</span>
+              </div>
+              <div className="flex gap-4">
+                <button className="bg-gray-600 text-gray-400 px-6 py-2 rounded-full text-sm font-semibold cursor-not-allowed">
+                  Coming Soon
+                </button>
+                <button className="border border-gray-600 text-gray-400 px-6 py-2 rounded-full text-sm font-semibold cursor-not-allowed">
+                  GitHub
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* About Section */}
       <section id="about" className="py-20 px-6 bg-gray-800/20">
         <div className="max-w-7xl mx-auto">
@@ -176,7 +273,16 @@ export default function Home() {
         <div className="max-w-7xl mx-auto">
           <div className="grid md:grid-cols-4 gap-8">
             <div className="md:col-span-2">
-              <div className="text-2xl font-bold gradient-text mb-4">Kyvra Tech</div>
+              <div className="flex items-center space-x-3 mb-4">
+                <Image 
+                  src="/kyvra_logo.svg" 
+                  alt="Kyvra Tech Logo" 
+                  width={32} 
+                  height={32}
+                  className="w-8 h-8"
+                />
+                <div className="text-2xl font-bold gradient-text">Kyvra Tech</div>
+              </div>
               <p className="text-gray-400 mb-6">
                 Leading innovation in software development and cryptocurrency technology.
               </p>
@@ -204,18 +310,18 @@ export default function Home() {
             <div>
               <h3 className="text-lg font-semibold mb-4">Services</h3>
               <ul className="space-y-2 text-gray-400">
-                <li><a href="#" className="hover:text-[#00b2a9] transition-colors">Software Development</a></li>
-                <li><a href="#" className="hover:text-[#00b2a9] transition-colors">Blockchain Solutions</a></li>
-                <li><a href="#" className="hover:text-[#00b2a9] transition-colors">Web3 Development</a></li>
-                <li><a href="#" className="hover:text-[#00b2a9] transition-colors">Consulting</a></li>
+                <li><a href="#services" className="hover:text-[#00b2a9] transition-colors">Software Development</a></li>
+                <li><a href="#services" className="hover:text-[#00b2a9] transition-colors">Blockchain Solutions</a></li>
+                <li><a href="#services" className="hover:text-[#00b2a9] transition-colors">Web3 Development</a></li>
+                <li><a href="#services" className="hover:text-[#00b2a9] transition-colors">Consulting</a></li>
               </ul>
             </div>
             <div>
               <h3 className="text-lg font-semibold mb-4">Contact</h3>
               <ul className="space-y-2 text-gray-400">
-                <li>hello@kyvratech.com</li>
-                <li>+1 (555) 123-4567</li>
-                <li>San Francisco, CA</li>
+                <li>hoanguit@gmail.com</li>
+                <li>+84 906 888 888</li>
+                <li>Ho Chi Minh City, Vietnam</li>
               </ul>
             </div>
           </div>
