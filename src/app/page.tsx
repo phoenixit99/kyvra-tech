@@ -28,13 +28,13 @@ export default function Home() {
           <div className="flex justify-between items-center">
             <div className="flex items-center space-x-3">
               <Image
-                src="/kyvra_logo.svg"
+                src="/kyvra_logo.png"
                 alt="Kyvra Tech Logo"
-                width={40}
-                height={40}
+                width={30}
+                height={47}
                 className="w-10 h-10"
               />
-              <div className="text-2xl font-bold gradient-text">Kyvra Tech</div>
+              <div className="text-2xl font-bold color-white">Kyvra Tech</div>
             </div>
             <div className="hidden md:flex space-x-8">
               <a
@@ -419,13 +419,13 @@ export default function Home() {
             <div className="md:col-span-2">
               <div className="flex items-center space-x-3 mb-4">
                 <Image
-                  src="/kyvra_logo.svg"
+                  src="/kyvra_logo.png"
                   alt="Kyvra Tech Logo"
-                  width={32}
-                  height={32}
-                  className="w-8 h-8"
+                  width={30}
+                  height={57}
+                  className="w-8 h-8 color-white"
                 />
-                <div className="text-2xl font-bold gradient-text">
+                <div className="text-2xl font-bold color-white">
                   Kyvra Tech
                 </div>
               </div>
